@@ -15,7 +15,20 @@ var questionsArray = [
         questionTitle: "test question",
         choices: ["answer1", "answer2", "answer3", "answer4"],
         correctAnswer: "answer1"
+    },{
+        questionTitle: "test question",
+        choices: ["answer1", "answer2", "answer3", "answer4"],
+        correctAnswer: "answer1"
+    } ,{
+        questionTitle: "test question",
+        choices: ["answer1", "answer2", "answer3", "answer4"],
+        correctAnswer: "answer1"
+    } {
+        questionTitle: "test question",
+        choices: ["answer1", "answer2", "answer3", "answer4"],
+        correctAnswer: "answer1"
     } 
+    
 ]
 
 function start() {
