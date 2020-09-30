@@ -42,17 +42,16 @@ function start() {
     console.log("test")
     startScreen.setAttribute("class", "hidden")
     questions.removeAttribute("class")
-    // setInterval(timer,1000)
-    timer.textContent = time
+    setInterval(function(){
+        time--;
+        timer.textContent = time
+    },1000)
+    
     getQuestion()
 }
 
-//my time counter
-function timer(){
-    time --
-    timer.textContent = time
-    
-}
+
+
 
 //a function that gets the next question in the array 
 function getQuestion(){
@@ -69,11 +68,41 @@ function getQuestion(){
 
 
 
+
 // event listener for the buttons 
 //is the button clicked correct or not
 //if correct one function for correct answers
 // one function for incorrect 
 
 
+choices.addEventListener("click", function(e){
+    e.preventDefault();
+
+    i++
+    
+    questionsAnswered();
+
+
+
+    
+
+})
+
 
 startQuiz.onclick = start
+
+
+
+
+function questionsAnswered(e){
+    var correctAnswer = questionsArray[index].correctAnswer
+    console.log(correctAnswer)
+    var userAnswer = e.target.getAttribute("data-correctAnswer")
+    console.log(userAnswer)
+    
+
+}
+
+
+
+
