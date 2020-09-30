@@ -2,10 +2,18 @@
     display: none;
 }
 
+
 body {
     background-color: cornflowerblue;
+    text-align: center;
 }
 
 button {
-    border: solid black;
+    border: solid grey;
+    align-content: center;
+}
+
+.intro {
+    text-align: center;
+    
 }
