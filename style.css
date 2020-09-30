@@ -1,3 +1,11 @@
 .hidden{
     display: none;
 }
+
+body {
+    background-color: cornflowerblue;
+}
+
+button {
+    border: solid black;
+}

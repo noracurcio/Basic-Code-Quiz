@@ -15,15 +15,15 @@ var questionsArray = [
         questionTitle: "test question",
         choices: ["answer1", "answer2", "answer3", "answer4"],
         correctAnswer: "answer1"
-    },{
+    }, {
         questionTitle: "test question",
         choices: ["answer1", "answer2", "answer3", "answer4"],
         correctAnswer: "answer1"
-    } ,{
+    }, {
         questionTitle: "test question",
         choices: ["answer1", "answer2", "answer3", "answer4"],
         correctAnswer: "answer1"
-    } {
+    }, {
         questionTitle: "test question",
         choices: ["answer1", "answer2", "answer3", "answer4"],
         correctAnswer: "answer1"
@@ -35,14 +35,15 @@ function start() {
     console.log("test")
     startScreen.setAttribute("class", "hidden")
     questions.removeAttribute("class")
-    // setInterval(timer,1000)
-    timer.textContent = time
+    setInterval(time,1000)
+    time.textContent = time
     getQuestion()
 }
 
 function timer(){
     time --
     timer.textContent = time
+    
 }
 
 function getQuestion(){
