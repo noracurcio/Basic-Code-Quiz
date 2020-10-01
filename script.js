@@ -104,12 +104,12 @@ function questionsAnswered(){
         
 }
 
-function endQuiz(){
-    if(myCountdown === 0 || index === 4){
-        choices.innerHTML = "";
-        endScreen.removeAttribute("class", "hidden")
-    }
-}
+// function endQuiz(){
+//     if(myCountdown === 0 || index === 4){
+//         choices.innerHTML = "";
+//         endScreen.removeAttribute("class", "hidden")
+//     }
+// }
 
 
 
