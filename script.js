@@ -27,13 +27,13 @@ var questionsArray = [
         choices: ["{", "[", "(", "no braces needed"],
         correctAnswer: "[",
     }, {
-        questionTitle: "Question 3: In javascript, how do you call a function? ",
-        choices: ["answer1", "answer2", "answer3", "answer4"],
-        correctAnswer: "answer3",
+        questionTitle: "Question 3: What do you put at the end of a function to call it? ",
+        choices: ["//", "||", "()", "??"],
+        correctAnswer: "()",
     }, {
-        questionTitle: "Question 4",
-        choices: ["answer1", "answer2", "answer3", "answer4"],
-        correctAnswer: "answer4",
+        questionTitle: "What is the best use of an object?",
+        choices: ["To stylize your page", "To return a function", "To hold multiple sets of data", "I don't know"],
+        correctAnswer: "To hold multiple sets of data",
     } 
     
 ]
@@ -52,11 +52,7 @@ myCountdown = setInterval(function(){
         alert("Sorry, you're out of time.")
     }
     
-
-    
 },1000)
-
-
 }
 
 function start() {
@@ -88,61 +84,32 @@ function getQuestion() {
   }
 
 
-
-
-
-// event listener for the buttons 
-//is the button clicked correct or not
-//if correct one function for correct answers
-// one function for incorrect 
-
-
-
-
+//Sets off the series of functions and the timer
 startQuiz.onclick = start
 
 
-
-
 function questionsAnswered(){
-    // var correctAnswer = questionsArray[index].correctAnswer
-    // console.log(correctAnswer)
-    // var userAnswer = e.target.getAttribute("data-answer")
-    // console.log(userAnswer)
-    
+
 
     if (this.value!== questionsArray[index].correctAnswer ){
         alert("incorrect!");
         time -=10;
         timer.textContent = time
         
-         
-
     } else(
-    alert("Correct!")
-    )
-
-
-    index++
-
-    getQuestion()
-
-
+        alert("Correct!")
+        )
+        index++
+        getQuestion()
+        
 }
 
 function endQuiz(){
-    clearInterval(timer)
-
-// }
-
-choices.addEventListener("click", function(e){
-    e.preventDefault();
-
-
-    
-    questionsAnswered();
-
-    
-
-})
+    if(myCountdown === 0 || index === 4){
+        choices.innerHTML = "";
+        endScreen.removeAttribute("class", "hidden")
+    }
 }
+
+
+
