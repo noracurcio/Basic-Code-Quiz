@@ -20,12 +20,12 @@ var myCountdown;
 var questionsArray = [
     {
         questionTitle: "Question 1",
-        choices: ["answer1", "answer2", "answer3", "answer4"],
-        correctAnswer: "answer1",
+        choices: ["bob", "answer2", "answer3", "answer4"],
+        correctAnswer: "bob",
     }, {
         questionTitle: "Question 2",
-        choices: ["answer1", "answer2", "answer3", "answer4"],
-        correctAnswer: "answer2",
+        choices: ["answer1", "jenny", "answer3", "answer4"],
+        correctAnswer: "jenny",
     }, {
         questionTitle: "Question 3",
         choices: ["answer1", "answer2", "answer3", "answer4"],
@@ -112,13 +112,14 @@ function questionsAnswered(){
         time -=10;
         timer.textContent = time
         
-        
+         
 
     } else(
     alert("Correct!")
     )
 
-    index++;
+
+    index++
 
     getQuestion()
 
