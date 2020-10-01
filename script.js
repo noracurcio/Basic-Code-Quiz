@@ -70,17 +70,19 @@ function start() {
 
 
 //a function that gets the next question in the array 
-function getQuestion(){
-    var currentQ = questionsArray[index]
-    console.log(currentQ)
-    title.textContent = currentQ.questionTitle
-    currentQ.choices.forEach(function(choice,i){
-        console.log(choice,i)
-        var button = document.createElement("button")
-        button.textContent = choice
-        choices.appendChild(button)
-    })
-}
+function getQuestion() {
+    var currentQ = questionsArray[index];
+    console.log(currentQ);
+    title.textContent = currentQ.questionTitle;
+    currentQ.choices.forEach(function (choice, i) {
+      console.log(choice, i);
+      var button = document.createElement("button");
+      button.setAttribute("value", choice);
+      button.textContent = choice;
+      button.onclick = questionsAnswered;
+      choices.appendChild(button);
+    });
+  }
 
 
 
@@ -91,16 +93,6 @@ function getQuestion(){
 // one function for incorrect 
 
 
-choices.addEventListener("click", function(e){
-    e.preventDefault();
-
-
-    
-    questionsAnswered();
-
-    
-
-})
 
 
 startQuiz.onclick = start
@@ -116,25 +108,36 @@ function questionsAnswered(){
     
 
     if (this.value!== questionsArray[index].correctAnswer ){
-        alert("incorrect!")
-        // indexQuestion++
-        // getQuestion();
-
-        // if (userAnswer === correctAnswer){
+        alert("incorrect!");
+        time -=10;
+        timer.textContent = time
         
-        // } else {
-            
-        //     countdown-= 15
+        
 
-} else(
+    } else(
     alert("Correct!")
-)
+    )
+
+    index++;
+
+    getQuestion()
+
+
 }
 
-// function endQuiz(){
-//     clearInterval(timer)
+function endQuiz(){
+    clearInterval(timer)
 
 // }
 
+choices.addEventListener("click", function(e){
+    e.preventDefault();
 
 
+    
+    questionsAnswered();
+
+    
+
+})
+}
