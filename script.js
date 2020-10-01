@@ -27,7 +27,7 @@ var questionsArray = [
         choices: ["{", "[", "(", "no braces needed"],
         correctAnswer: "[",
     }, {
-        questionTitle: "What language ",
+        questionTitle: "Question 3: In javascript, how do you call a function? ",
         choices: ["answer1", "answer2", "answer3", "answer4"],
         correctAnswer: "answer3",
     }, {
@@ -49,7 +49,9 @@ myCountdown = setInterval(function(){
     timer.textContent = time
     if(time === 0 ){
         clearInterval(myCountdown);
+        alert("Sorry, you're out of time.")
     }
+    
 
     
 },1000)
