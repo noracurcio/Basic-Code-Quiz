@@ -19,15 +19,15 @@ var myCountdown;
 //An object that holds all of the questions and answers in the quiz.
 var questionsArray = [
     {
-        questionTitle: "Question 1",
-        choices: ["bob", "answer2", "answer3", "answer4"],
-        correctAnswer: "bob",
+        questionTitle: "Question 1: In javascript, a loop that cycles through an array is called a ___  loop.",
+        choices: ["for", "four", "fawer", "floor"],
+        correctAnswer: "for",
     }, {
-        questionTitle: "Question 2",
-        choices: ["answer1", "jenny", "answer3", "answer4"],
-        correctAnswer: "jenny",
+        questionTitle: "Question 2: Which of these is the correct braces to use on an array?",
+        choices: ["{", "[", "(", "no braces needed"],
+        correctAnswer: "[",
     }, {
-        questionTitle: "Question 3",
+        questionTitle: "What language ",
         choices: ["answer1", "answer2", "answer3", "answer4"],
         correctAnswer: "answer3",
     }, {
@@ -74,6 +74,7 @@ function getQuestion() {
     var currentQ = questionsArray[index];
     console.log(currentQ);
     title.textContent = currentQ.questionTitle;
+    choices.innerHTML = "";
     currentQ.choices.forEach(function (choice, i) {
       console.log(choice, i);
       var button = document.createElement("button");
@@ -83,6 +84,7 @@ function getQuestion() {
       choices.appendChild(button);
     });
   }
+
 
 
 
